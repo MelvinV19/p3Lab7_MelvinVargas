@@ -16,15 +16,15 @@ class Racional{
     int getNumerador()const;
 
     int getDenominador()const;
-  
+
     const Racional operator+(const Racional&)const;
-    Racional operator+=(const Racional&)const;
+    Racional operator+=(const Racional&);
     const Racional operator-(const Racional&)const;
-    Racional operator-=(const Racional&)const;
+    Racional operator-=(const Racional&);
     const Racional operator*(const Racional&)const;
-    Racional operator*=(const Racional&)const;
+    Racional operator*=(const Racional&);
     const Racional operator/(const Racional&)const;
-    Racional operator/=(const Racional&)const;
+    Racional operator/=(const Racional&);
 
 };
 #endif

@@ -38,12 +38,34 @@ const Racional Racional::operator+(const Racional& rightValue)const{
   return *suma;
 }
 
+Racional Racional::operator+=(const Racional& rightValue){
+  int numer;
+  int deno;
+  numer=(this->numerador*rightValue.getDenominador())+(rightValue.getNumerador()*this->denominador);
+  deno=this->denominador*rightValue.getDenominador();
+  numerador=numer;
+  denominador=deno;
+  Racional* suma=new Racional(numerador,denominador);
+  return *suma;
+}
+
 const Racional Racional::operator-(const Racional& rightValue)const{
   int numer;
   int deno;
   numer=(this->numerador*rightValue.getDenominador())-(rightValue.getNumerador()*this->denominador);
   deno=this->denominador*rightValue.getDenominador();
   Racional* resta=new Racional(numer,deno);
+  return *resta;
+}
+
+Racional Racional::operator-=(const Racional& rightValue){
+  int numer;
+  int deno;
+  numer=(this->numerador*rightValue.getDenominador())-(rightValue.getNumerador()*this->denominador);
+  deno=this->denominador*rightValue.getDenominador();
+  numerador=numer;
+  denominador=deno;
+  Racional* resta=new Racional(numerador,denominador);
   return *resta;
 }
 
@@ -56,11 +78,33 @@ const Racional Racional::operator*(const Racional& rightValue)const{
   return *multi;
 }
 
+Racional Racional::operator*=(const Racional& rightValue){
+  int numer;
+  int deno;
+  numer=this->numerador*rightValue.getNumerador();
+  deno=this->denominador*rightValue.getDenominador();
+  numerador=numer;
+  denominador=deno;
+  Racional* multi=new Racional(numerador,denominador);
+  return *multi;
+}
+
 const Racional Racional::operator/(const Racional& rightValue)const{
   int numer;
   int deno;
   numer=this->numerador*rightValue.getDenominador();
   deno=this->denominador*rightValue.getNumerador();
   Racional* multi=new Racional(numer,deno);
+  return *multi;
+}
+
+Racional Racional::operator/=(const Racional& rightValue){
+  int numer;
+  int deno;
+  numer=this->numerador*rightValue.getDenominador();
+  deno=this->denominador*rightValue.getNumerador();
+  numerador=numer;
+  denominador=deno;
+  Racional* multi=new Racional(numerador,denominador);
   return *multi;
 }

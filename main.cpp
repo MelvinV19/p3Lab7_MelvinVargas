@@ -72,15 +72,14 @@ int main(int argc, char const *argv[]) {
         cout<< "Segunda Fraccion: "<<endl;
         cout<< fraccion2->getNumerador() <<"/";
         cout<< fraccion2->getDenominador()<<endl;
-        Racional fraccion3=*fraccion1+*fraccion2;
-        cout<< "La asignacion es: "<<endl;
-        cout<<fraccion3.getNumerador()<<"/"<<fraccion3.getDenominador()<<endl;
-        if(fraccion3.getNumerador()==0){
+        *fraccion1+=*fraccion2;
+        cout<< "La suma y asignacion fue: "<<endl;
+        cout<< fraccion1->getNumerador()<< "/"<<fraccion1->getDenominador()<<endl;
+        if(fraccion1->getNumerador()==0){
           salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" += "<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<"0"<<endl;
         }else{
-          salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" += "<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<fraccion3.getNumerador()<<"/"<<fraccion3.getDenominador()<<endl;
+          salida<<"La asignacion fue: "<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<endl;
         }
-
       }
 				break;
 
@@ -114,7 +113,30 @@ int main(int argc, char const *argv[]) {
 
 				break;
       case 5:{
-
+        for (int i = 0; i < fracciones.size(); i++) {
+          cout<<i<<" "<<fracciones[i]->getNumerador()<<"/"<<fracciones[i]->getDenominador()<<endl;
+        }
+        int frac1,frac2;
+        cout<< "Ingrese numero de posicion de la primera fraccion: " <<endl;
+        cin>>frac1;
+        cout<< "Ingrese numero de posicion de la segunda fraccion: "<<endl;
+        cin>>frac2;
+        fraccion1=fracciones[frac1];
+        fraccion2=fracciones[frac2];
+        cout<< "Primera Fraccion:" <<endl;
+        cout<< fraccion1->getNumerador() <<"/";
+        cout<< fraccion1->getDenominador()<<endl;
+        cout<< "Segunda Fraccion: "<<endl;
+        cout<< fraccion2->getNumerador() <<"/";
+        cout<< fraccion2->getDenominador()<<endl;
+        *fraccion1-=*fraccion2;
+        cout<<"la resta y la asignacion fue: "<<endl;
+        cout<< fraccion1->getNumerador()<< "/"<<fraccion1->getDenominador()<<endl;
+        if(fraccion1->getNumerador()==0){
+          salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" -= "<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<"0"<<endl;
+        }else{
+          salida<<"La asignacion fue: "<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<endl;
+        }
       }
 
         break;
@@ -126,8 +148,8 @@ int main(int argc, char const *argv[]) {
         cout<< "Ingrese numero de posicion de la primera fraccion: " <<endl;
         cin>>frac1;
         cout<< "Ingrese numero de posicion de la segunda fraccion: "<<endl;
-        cin>>frac2;
         fraccion1=fracciones[frac1];
+        cin>>frac2;
         fraccion2=fracciones[frac2];
         cout<< "Primera Fraccion:" <<endl;
         cout<< fraccion1->getNumerador() <<"/";
@@ -147,7 +169,30 @@ int main(int argc, char const *argv[]) {
 
         break;
       case 7:{
-
+        for (int i = 0; i < fracciones.size(); i++) {
+          cout<<i<<" "<<fracciones[i]->getNumerador()<<"/"<<fracciones[i]->getDenominador()<<endl;
+        }
+        int frac1,frac2;
+        cout<< "Ingrese numero de posicion de la primera fraccion: " <<endl;
+        cin>>frac1;
+        cout<< "Ingrese numero de posicion de la segunda fraccion: "<<endl;
+        cin>>frac2;
+        fraccion1=fracciones[frac1];
+        fraccion2=fracciones[frac2];
+        cout<< "Primera Fraccion:" <<endl;
+        cout<< fraccion1->getNumerador() <<"/";
+        cout<< fraccion1->getDenominador()<<endl;
+        cout<< "Segunda Fraccion: "<<endl;
+        cout<< fraccion2->getNumerador() <<"/";
+        cout<< fraccion2->getDenominador()<<endl;
+        *fraccion1*=*fraccion2;
+        cout<<"la multplicacion y la asignacion fue: "<<endl;
+        cout<< fraccion1->getNumerador()<< "/"<<fraccion1->getDenominador()<<endl;
+        if(fraccion1->getNumerador()==0){
+          salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" *="<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<"0"<<endl;
+        }else{
+          salida<<"La asignacion fue: "<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<endl;
+        }
       }
 
         break;
@@ -171,8 +216,8 @@ int main(int argc, char const *argv[]) {
         Racional fraccion3=(*fraccion1) /(*fraccion2);
         cout<< "La division es: "<<endl;
         cout<<fraccion3.getNumerador()<<"/"<<fraccion3.getDenominador()<<endl;
+        salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" / "<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<"0"<<endl;
         if(fraccion3.getNumerador()==0){
-          salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" / "<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<"0"<<endl;
         }else{
           salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" / "<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<fraccion3.getNumerador()<<"/"<<fraccion3.getDenominador()<<endl;
         }
@@ -181,9 +226,31 @@ int main(int argc, char const *argv[]) {
         break;
 
       case 9:{
-
+        for (int i = 0; i < fracciones.size(); i++) {
+          cout<<i<<" "<<fracciones[i]->getNumerador()<<"/"<<fracciones[i]->getDenominador()<<endl;
+        }
+        int frac1,frac2;
+        cout<< "Ingrese numero de posicion de la primera fraccion: " <<endl;
+        cin>>frac1;
+        cout<< "Ingrese numero de posicion de la segunda fraccion: "<<endl;
+        cin>>frac2;
+        fraccion1=fracciones[frac1];
+        fraccion2=fracciones[frac2];
+        cout<< "Primera Fraccion:" <<endl;
+        cout<< fraccion1->getNumerador() <<"/";
+        cout<< fraccion1->getDenominador()<<endl;
+        cout<< "Segunda Fraccion: "<<endl;
+        cout<< fraccion2->getNumerador() <<"/";
+        cout<< fraccion2->getDenominador()<<endl;
+        (*fraccion1) /=(*fraccion2);
+        cout<<"la division y la asignacion fue: "<<endl;
+        cout<< fraccion1->getNumerador()<< "/"<<fraccion1->getDenominador()<<endl;
+        if(fraccion1->getNumerador()==0){
+          salida<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<" /= "<<fraccion2->getNumerador()<<"/"<<fraccion2->getDenominador()<<"="<<"0"<<endl;
+        }else{
+          salida<<"La asignacion fue: "<<fraccion1->getNumerador()<<"/"<<fraccion1->getDenominador()<<endl;
+        }
       }
-
         break;
 
       case 10:{
